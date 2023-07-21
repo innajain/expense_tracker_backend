@@ -1,6 +1,7 @@
 const transactionsModel = require("../../db/Models/transactionsModel");
 
 exports.searchTransaction = async (req, res) => {
+  console.log("searched")
   let queryObj = {};
   queryObj = { ...searchByDate(req), ...searchByTitle(req)};
   try {
