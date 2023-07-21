@@ -12,9 +12,9 @@ model = require("../db/Models/transactionsModel");
 
 
 transactionRouter.get("/all", getAllTransactions);
-transactionRouter.post("/add_transaction", addTransaction);
+transactionRouter.post("/add", addTransaction);
 transactionRouter.get("/transaction/:id", getTransactionByID);
-transactionRouter.delete("/del_transaction", deleteTransaction);
+transactionRouter.delete("/delete", deleteTransaction);
 transactionRouter.put("/transaction/:id/update", updateTransaction);
 transactionRouter.get("/search", searchTransaction);
 
