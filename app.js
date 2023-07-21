@@ -10,4 +10,9 @@ app.use(cors({
 app.use(express.json())
 
 app.use("/api/v1/transactions", require("./routes/transactionRouter"))
+app.get("/", (req,res)=>{
+    res.json({
+      msg: "welcome"
+    })
+});
 module.exports = app

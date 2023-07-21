@@ -6,7 +6,7 @@ exports.getAllTransactions = async (req, res) => {
     res.json(
       lst.map((item) => {
         return {
-          title:item.title, date:item.date_text
+          title:item.title, date:item.date_text, type: item.type
         }
       })
     );
