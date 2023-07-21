@@ -11,6 +11,6 @@ exports.getAllTransactions = async (req, res) => {
       })
     );
   } catch (error) {
-    res.json({msg:"Database Error"});
+    res.send(500).json({msg:"Database Error"});
   }
 };
