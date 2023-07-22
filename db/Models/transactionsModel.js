@@ -1,4 +1,5 @@
 const { default: mongoose } = require("mongoose");
+const {formatDate} = require("../../utils/dateFuncs")
 
 const transactionSchema = mongoose.Schema({
     title: {
@@ -11,7 +12,7 @@ const transactionSchema = mongoose.Schema({
     },
     date: {
         type: Date,
-        default: Date.now()
+        default: new Date() 
     },
     description: {
         type: String
@@ -25,7 +26,8 @@ const transactionSchema = mongoose.Schema({
         default: []
     },
     date_text:{
-        type: String
+        type: String,
+        default: formatDate(new Date())
     },
     others: {
         type:Object,
