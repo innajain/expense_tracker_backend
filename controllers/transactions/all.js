@@ -6,11 +6,14 @@ exports.getAllTransactions = async (req, res) => {
     res.json(
       lst.map((item) => {
         return {
-          title:item.title, date:item.date_text, type: item.type
-        }
+          id: item.id,
+          title: item.title,
+          date: item.date_text,
+          type: item.type,
+        };
       })
     );
   } catch (error) {
-    res.send(500).json({msg:"Database Error"});
+    res.send(500).json({ msg: "Database Error" });
   }
 };
